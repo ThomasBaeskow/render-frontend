@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
+
 function Getallusers(props){
 
     const [Alluser,setuser]=useState({
@@ -8,7 +9,7 @@ function Getallusers(props){
     })
     useEffect(()=>{
         try{
-            axios.get('https://users-app-api.onrender.com/getallusers').then(res=>{
+            axios.get('https://users-api-9nnl.onrender.com/getallusers').then(res=>{
                 setuser({
                     students:res.data
                 });
